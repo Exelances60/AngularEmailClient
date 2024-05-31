@@ -1,0 +1,37 @@
+<h3>Sign In</h3>
+<form
+  (ngSubmit)="onSubmit()"
+  [formGroup]="signInForm"
+  class="ui form"
+  style="display: flex; flex-direction: column; gap: 10px"
+>
+  <app-input
+    [control]="signInForm.controls.username"
+    [label]="'User Name'"
+  ></app-input>
+  <p
+    *ngIf="signInForm.errors?.['wrongUsername'] as error"
+    class="ui pointing red basic label"
+  >
+    {{ signInForm.errors?.["message"] }}
+  </p>
+  <app-input
+    [control]="signInForm.controls.password"
+    [label]="'Password'"
+    [type]="'password'"
+  ></app-input>
+  <p
+    *ngIf="signInForm.errors?.['wrongPassword'] as error"
+    class="ui pointing red basic label"
+  >
+    {{ signInForm.errors?.["message"] }}
+  </p>
+  <button
+    class="ui button primary submit"
+    type="submit"
+    [disabled]="signInForm.invalid"
+  >
+    Sign In
+  </button>
+  <a routerLink="/signup">Don't have an account? Sign Up</a>
+</form>
