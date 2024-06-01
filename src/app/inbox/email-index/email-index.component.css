@@ -1,0 +1,18 @@
+.item a {
+  color: #333;
+  text-decoration: none;
+}
+
+a.active {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s;
+}
+
+a.active::before {
+  content: ">";
+  font-size: 20px;
+  margin-right: 10px;
+}

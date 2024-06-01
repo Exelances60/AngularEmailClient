@@ -1,0 +1,16 @@
+<div class="ui celled list">
+  <div class="item" *ngFor="let email of emails">
+    <a
+      [routerLink]="email.id"
+      class="content"
+      style="cursor: pointer"
+      routerLinkActive="active"
+    >
+      <div class="content" style="cursor: pointer">
+        <i class="left floated star icon"></i>
+        <div class="header">{{ email.subject }}</div>
+        <p class="description">{{ email.from }}</p>
+      </div>
+    </a>
+  </div>
+</div>
