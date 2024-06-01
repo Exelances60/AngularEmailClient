@@ -9,6 +9,8 @@ import { EmailShowComponent } from './email-show/email-show.component';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { SafeHtmlPipe } from '../shared/safe-html.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RouterOutlet,
     RouterLink,
     RouterModule,
+    SafeHtmlPipe,
+    SharedModule,
   ],
 })
 export class InboxModule {}

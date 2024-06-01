@@ -1,1 +1,9 @@
-<p>email-create works!</p>
+<button class="ui button primary" (click)="showModal = true">
+  Create Email
+</button>
+<app-modal *ngIf="showModal" (dismiss)="showModal = false">
+  <div modalTitle>Create Email</div>
+  <div modalContent>
+    <!--     <app-email-form (create)="onCreate($event)"></app-email-form> -->
+  </div>
+</app-modal>

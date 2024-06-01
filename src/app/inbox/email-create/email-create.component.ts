@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './email-create.component.html',
   styleUrl: './email-create.component.css',
 })
-export class EmailCreateComponent {}
+export class EmailCreateComponent {
+  showModal = false;
+}

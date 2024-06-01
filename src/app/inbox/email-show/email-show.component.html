@@ -9,3 +9,5 @@
     To : <i>{{ email.to }}</i>
   </div>
 </div>
+<div class="ui divider"></div>
+<div [innerHTML]="email.html | safeHtml"></div>
