@@ -5,7 +5,6 @@ export interface Email {
   to: string;
   text: string;
   html: string;
-  date: string;
 }
 
 export interface EmailSummary {

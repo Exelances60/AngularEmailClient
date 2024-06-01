@@ -1,7 +1,12 @@
 <ng-container>
   <div class="field">
     <label>{{ label }}</label>
-    <input [formControl]="control" [placeholder]="placeholder" [type]="type" />
+    <input
+      [formControl]="control"
+      [placeholder]="placeholder"
+      [type]="type"
+      [readOnly]="readonly"
+    />
     <app-form-error [control]="control"></app-form-error>
   </div>
 </ng-container>

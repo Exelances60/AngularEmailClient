@@ -1,0 +1,14 @@
+<form
+  [formGroup]="emailForm"
+  class="ui form"
+  style="display: flex; flex-direction: column; gap: 10px"
+  (ngSubmit)="onSubmit()"
+>
+  <app-input [label]="'Email'" [control]="sendControl('to')"></app-input>
+  <app-input [label]="'From'" [control]="sendControl('from')"></app-input>
+  <app-input [label]="'Subject'" [control]="sendControl('subject')"></app-input>
+  <app-input [label]="'Text'" [control]="sendControl('text')"></app-input>
+  <div class="ui buttons right floated">
+    <button class="ui button primary" type="submit">Create</button>
+  </div>
+</form>

@@ -1,9 +1,16 @@
-<button class="ui button primary" (click)="showModal = true">
+<button
+  class="ui button primary inverted fluid"
+  (click)="showModal = true"
+  style="margin-bottom: 10px; margin-top: 10px"
+>
   Create Email
 </button>
 <app-modal *ngIf="showModal" (dismiss)="showModal = false">
   <div modalTitle>Create Email</div>
   <div modalContent>
-    <!--     <app-email-form (create)="onCreate($event)"></app-email-form> -->
+    <app-email-form
+      [email]="email"
+      (emailSubmit)="sendMail($event)"
+    ></app-email-form>
   </div>
 </app-modal>

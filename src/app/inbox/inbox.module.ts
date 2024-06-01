@@ -11,6 +11,8 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SafeHtmlPipe } from '../shared/safe-html.pipe';
 import { SharedModule } from '../shared/shared.module';
+import { EmailFormComponent } from './email-form/email-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { SharedModule } from '../shared/shared.module';
     EmailShowComponent,
     PlaceholderComponent,
     NotFoundComponent,
+    EmailFormComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +33,7 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule,
     SafeHtmlPipe,
     SharedModule,
+    ReactiveFormsModule,
   ],
 })
 export class InboxModule {}
